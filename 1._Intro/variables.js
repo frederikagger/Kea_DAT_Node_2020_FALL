@@ -11,7 +11,9 @@ let name = "Anders";
     // console.log(scopedVar);
 }
 
-
+const myObj = {
+    key: "value"
+};
 
 
 
