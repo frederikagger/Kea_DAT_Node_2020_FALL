@@ -16,4 +16,12 @@ const myObj = {
 };
 
 
+const fruits = [{}, 1, 2, "apple", "banana"];
+
+fruits.push({});
+fruits.pop();
+fruits.pop();
+
+console.log(fruits[0]);
+
 
