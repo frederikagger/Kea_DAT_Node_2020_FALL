@@ -1,0 +1,6 @@
+{
+  "description": "Our first API",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
