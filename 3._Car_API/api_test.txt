@@ -1,0 +1,14 @@
+HTTP METHOD       PATH
+-----------       ----
+GET               /cars
+GET               /cars/id
+POST              /cars   // adding one car
+PATCH             /cars/id
+DELETE            /cars/id
+
+let cars = [
+    { id: 1, name: "brom brom" },
+    { id: 2, model: "Mitsubishi" }
+];
+
+// how to handle ids? The client doesn't decide. The server does.
