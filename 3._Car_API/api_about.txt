@@ -7,7 +7,7 @@ PATCH             /cars/id
 DELETE            /cars/id
 
 let cars = [
-    { id: 1, name: "brom brom" },
+    { id: 1, name: "brum brum" },
     { id: 2, model: "Mitsubishi" }
 ];
 
