@@ -2,11 +2,23 @@ const express = require("express");
 const app = express();
 // const app = require("express")();
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
     return res.send("<h1>hello</h1>");
+});
+
+app.get("/greeting", (req, res) => {
+    return res.redirect("/");
+});
+
+app.get("/documentation", (req, res) => {
+    return res.sendFile(__dirname + "/documentation.html");
+});
+
+app.get("/documentation2", (req, res) => {
+    return res.sendFile(__dirname + "/documentation2.html");
 });
 
 app.get("/me", (req, res) => {

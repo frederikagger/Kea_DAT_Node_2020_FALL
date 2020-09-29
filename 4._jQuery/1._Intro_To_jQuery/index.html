@@ -2,14 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            font-size: 2em;
+            padding-left: 0.4em;
+            width: 42%;
+            min-height: 55px;
+        }
+
+        #teleport-btn {
+            width: 13%;
+            min-height: 60px;
+        }
+    </style>
     <title>First jQuery Project</title>
 </head>
 <body>
 
-    <!-- .paragraph-1-->
-    <div class="paragraph-1"></div>
-    <!-- #paragraph-2 -->
-    <div id="paragraph-2"></div>
+    <!--Style the website -->
+
+    <h1>Teleportation</h1>
+    <input class="input-left" placeholder="place here" />
+    <button id="teleport-btn">Teleport</button>
+    <input class="input-right" placeholder="place here" />
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./index.js"></script>
