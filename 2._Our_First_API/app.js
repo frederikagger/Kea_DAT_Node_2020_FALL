@@ -23,6 +23,10 @@ app.get("/proxy", (req, res) => {
         });
 });
 
+app.get("/catfacts", (req, res) => {
+    return res.sendFile(__dirname + "/catfacts.html");
+});
+
 app.get("/documentation", (req, res) => {
     return res.sendFile(__dirname + "/documentation.html");
 });

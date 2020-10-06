@@ -1,0 +1,21 @@
+{
+  "name": "keabriefcase",
+  "version": "0.0.1",
+  "description": "Easy file upload",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "file",
+    "files",
+    "fileupload",
+    "upload",
+    "briefcase"
+  ],
+  "author": "Anders",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Facts</title>
+</head>
+<body>
+    <h1>Welcome to cat facts!</h1>
+    <!-- Show a table with 2 cat facts -->
+    <table>
+        <tr>
+            <th>
+                Fact 1
+            </th>
+            <th>
+                Fact 2
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Fun fact1
+            </td>
+            <td>
+                Cats are fun!
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Fun fact1
+            </td>
+            <td>
+                Cats are fun!
+            </td>
+        </tr>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $.get("https://cat-fact.herokuapp.com/facts", (response) => {
+           console.log(response);
+        });
+
+        /*
+        * 1. Get cat facts by the way of $.ajax()
+        * 2. Show the cat facts in the table (jQuery)
+        * 3. Style it
+        * 4. Bonus: Pagination
+        *  */
+    </script>
+</body>
+</html>
