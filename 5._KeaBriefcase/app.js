@@ -3,13 +3,16 @@ const app = express();
 
 app.use(express.static('public'));
 
-
-
 app.get("/", (req, res) => {
     return res.sendFile(__dirname + "/public/upload/upload.html");
 });
 
-const port  = process.env.PORT || 80;
+app.get("/form", (req, res) => {
+    console.log(req.query);
+    return res.send({ data: req.query });
+});
+
+const port  = process.env.PORT || 8080;
 
 app.listen(port, (error) => {
     if (error) {
