@@ -12,14 +12,18 @@
     <a id="logo" href="/"><img id="logo-img" src="../assets/briefcaselogo.png"/></a>
     <h1>Upload</h1>
 
-    <div id="form">
-        <textarea id="form-message" cols="30" rows="10"></textarea>
-        <button id="form-submit" onclick="handleFormSubmitted()">Done</button>
-    </div>
+<!--    Create an about page -->
+
+    <form action="/form" method="POST" onsubmit="validateForm(); return false;">
+        <textarea id="form-message" cols="30" rows="10" name="message"></textarea>
+        <button id="form-submit" type="submit">Done</button>
+    </form>
 
 
-
-    <footer id="footer"><div id="footer-copyright"></div></footer>
+    <footer id="footer">
+        <div id="footer-copyright"></div>
+        <a href="/about"><button>Info</button></a>
+    </footer>
 
     <script src="./upload/upload.js"></script>
 </body>
