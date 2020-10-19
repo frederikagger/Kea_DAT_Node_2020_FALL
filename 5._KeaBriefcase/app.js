@@ -8,10 +8,10 @@ app.use(express.urlencoded({ extended: true }));
 
 const fs = require('fs');
 const uploadPage = fs.readFileSync(__dirname + "/public/upload/upload.html").toString();
-
+const footerPage = fs.readFileSync(__dirname + "/public/footer/footer.html").toString();
 
 app.get("/", (req, res) => {
-    return res.send(uploadPage);
+    return res.send(uploadPage + footerPage);
 });
 
 app.get("/about", (req, res) => {
@@ -22,9 +22,8 @@ app.get("/download", (req, res) => {
     return res.sendFile(__dirname + "/public/download/download.html");
 });
 
-app.post("/form", (req, res) => {
-    return res.send({ data: req.body });
-});
+const uploadRouter = require("./routes/upload.js");
+app.use(uploadRouter);
 
 const port  = process.env.PORT || 8080;
 
