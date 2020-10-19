@@ -16,15 +16,10 @@
 
     <form action="/form" method="POST" onsubmit="validateForm(); return false;">
         <textarea id="form-message" cols="30" rows="10" name="message"></textarea>
-        <button id="form-submit" type="submit">Done</button>
+        <button onclick="window.location.href='/about'" id="form-submit" type="submit">Done</button>
     </form>
 
 
-    <footer id="footer">
-        <div id="footer-copyright"></div>
-        <a href="/about"><button>Info</button></a>
-    </footer>
-
     <script src="./upload/upload.js"></script>
-</body>
-</html>
+
+
