@@ -2,6 +2,7 @@
 
 function validateForm() {
     const message = document.getElementById("form-message").value;
+    const file = document.getElementById("form-file");
 
     fetch("/uploads", {
         method: "POST",
@@ -9,7 +10,8 @@ function validateForm() {
             "content-type": "application/json"
         },
         body: JSON.stringify({
-            message
+            message,
+            file
         })
     })
     .then(response => response.json())
