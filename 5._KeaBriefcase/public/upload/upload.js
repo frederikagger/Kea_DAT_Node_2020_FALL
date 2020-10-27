@@ -1,10 +1,26 @@
 
 
 function validateForm() {
-    // lad os sende en fetch til /form
-    // redirect til /download on response
 
-    return true;
+
+
+
+    const message = document.getElementById("form-message").value;
+
+    fetch("/form", {
+        method: "POST",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            message
+        })
+    })
+    .then(res => res.json())
+    .then(res => {
+        window.location.href = "/download";
+    });
+
 }
 
 /*function handleFormSubmitted() {
