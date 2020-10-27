@@ -1,6 +1,9 @@
 
 
 function validateForm() {
+    // lad os sende en fetch til /form
+    // redirect til /download on response
+
     return true;
 }
 

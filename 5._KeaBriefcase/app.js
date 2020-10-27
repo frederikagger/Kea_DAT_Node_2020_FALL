@@ -7,19 +7,24 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const fs = require('fs');
+
+const header = fs.readFileSync(__dirname + "/public/header/header.html").toString();
+const footer = fs.readFileSync(__dirname + "/public/footer/footer.html").toString();
+
 const uploadPage = fs.readFileSync(__dirname + "/public/upload/upload.html").toString();
-const footerPage = fs.readFileSync(__dirname + "/public/footer/footer.html").toString();
+const aboutPage = fs.readFileSync(__dirname + "/public/about/about.html").toString();
+const downloadPage = fs.readFileSync(__dirname + "/public/download/download.html").toString();
 
 app.get("/", (req, res) => {
-    return res.send(uploadPage + footerPage);
+    return res.send(header + uploadPage + footer);
 });
 
 app.get("/about", (req, res) => {
-    return res.sendFile(__dirname + "/public/about/about.html");
+    return res.send(header + aboutPage + footer);
 });
 
 app.get("/download", (req, res) => {
-    return res.sendFile(__dirname + "/public/download/download.html");
+    return res.send(header + downloadPage + footer);
 });
 
 const uploadRouter = require("./routes/upload.js");
