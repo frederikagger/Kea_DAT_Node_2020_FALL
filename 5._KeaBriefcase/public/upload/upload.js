@@ -1,18 +1,14 @@
-
-
 function validateForm() {
-    const message = document.getElementById("form-message").value;
-    const file = document.getElementById("form-file");
+    const form = document.getElementById('form-upload');
+    const formData = new FormData(form);
 
     fetch("/uploads", {
         method: "POST",
-        headers: {
+        // when setting the formData it will not work by setting the content-type
+/*        headers: {
             "content-type": "application/json"
-        },
-        body: JSON.stringify({
-            message,
-            file
-        })
+        },*/
+        body: formData
     })
     .then(response => response.json())
     .then(result => {
