@@ -23,7 +23,7 @@ app.get("/about", (req, res) => {
     return res.send(header + aboutPage + footer);
 });
 
-app.get("/download", (req, res) => {
+app.get("/download/:id", (req, res) => {
     return res.send(header + downloadPage + footer);
 });
 

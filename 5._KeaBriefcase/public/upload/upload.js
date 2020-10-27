@@ -1,10 +1,6 @@
 
 
 function validateForm() {
-
-
-
-
     const message = document.getElementById("form-message").value;
 
     fetch("/form", {
@@ -16,9 +12,9 @@ function validateForm() {
             message
         })
     })
-    .then(res => res.json())
-    .then(res => {
-        window.location.href = "/download";
+    .then(response => response.json())
+    .then(result => {
+        window.location.href = `/download/${result.id}`;
     });
 
 }
