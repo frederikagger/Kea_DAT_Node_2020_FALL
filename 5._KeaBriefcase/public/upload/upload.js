@@ -3,7 +3,7 @@
 function validateForm() {
     const message = document.getElementById("form-message").value;
 
-    fetch("/form", {
+    fetch("/uploads", {
         method: "POST",
         headers: {
             "content-type": "application/json"
